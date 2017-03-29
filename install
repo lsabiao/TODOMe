@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 sudo rm /bin/todome
-sudo cp todome /bin/todome
+sudo cp todome.py /bin/todome
