@@ -1,0 +1,74 @@
+#!/usr/bin/env python3
+
+import shutil
+import sys
+import os
+
+
+#terminal settings
+width = shutil.get_terminal_size()[0]-2	
+
+#string constants
+nDone = u"\u25A1"
+done  = u"\u25A3"
+
+#color
+ansiRed = "\033[31m"
+ansiGreen = "\033[32m"
+ansiYellow = "\033[33m"
+ansiBlue = "\033[34m"
+ansiMagenta = "\033[35m"
+ansiCyan = "\033[36m"
+ansiDefault = "\033[39m"
+
+
+#formatColors
+def aR(txt):
+	return ansiRed+str(txt)+ansiDefault
+
+def aG(txt):
+	return ansiGreen+str(txt)+ansiDefault
+
+def aY(txt):
+	return ansiYellow+str(txt)+ansiDefault
+
+def aB(txt):
+	return ansiBlue+str(txt)+ansiDefault
+
+def aM(txt):
+	return ansiBlue+str(txt)+ansiDefault
+
+def aC(txt):
+	return ansiCyan+str(txt)+ansiDefault
+
+
+def getTodo(f):
+	p = open(f,'r')
+	todos = []
+	aux = 0
+	for linha in p:
+		aux+=1
+		linha = linha.strip()
+		if (linha.startswith("#TODO")):
+			todos.append(aB(aux)+": "+linha.strip("#TODO").strip())
+		elif(linha.startswith("//TODO")):
+			todos.append(aB(aux)+": "+linha.strip("//TODO").strip())
+	return todos
+
+def makeBox():
+	print (aR("+")+aC("-"*width)+aR("+"))
+
+def makeRow(msg):
+	#TODO continuar essa funcao
+	indent = 2
+	if(len(msg) > width):
+		#TODO separar em mais linhas
+		pass
+
+	return msg
+
+if __name__ == "__main__":
+	makeBox()
+	for a in getTodo(__file__):
+		print(makeRow(aY("TODO ")+a))
+	makeBox()
