@@ -172,5 +172,3 @@ if __name__ == "__main__":
                 print(makeRow(f))
             endBox()
     sys.exit(0)
-
-        
