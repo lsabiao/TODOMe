@@ -34,7 +34,7 @@ Mostrará quantos *TODOS* existem nos arquivos da pasta atual e subpastas
 
 
 ![wtfpl](http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-1.png)
-![exemplo](http://imgur.com/a/j00a7)
+![exemplo](http://i.imgur.com/LIDNiMl.gif)
 
 
 
@@ -71,6 +71,6 @@ Show how many *TODOs* are in the current folder and subfolders
 
 
 ![wtfpl](http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-1.png)
-![exemplo](http://imgur.com/a/j00a7)
+![exemplo](http://i.imgur.com/LIDNiMl.gif)
 
 
