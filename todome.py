@@ -128,15 +128,17 @@ def getFiles():
             #b[2] files
             for files in b[2]:
                 if(isBinary(os.path.join(b[0],files))== False):
-                    filesToCheck.append(os.path.join(b[0],files))
+                    if(files.startswith(".") == False):
+                        filesToCheck.append(os.path.join(b[0],files))
     else:
         f = os.listdir(os.getcwd())
         if(len(f) >= MAX_FILES):
             sys.exit(0)
         for b in f:
-            if(os.path.isdir(b)==False):
-                if(isBinary(b) == False): 
-                    filesToCheck.append(os.path.join(os.getcwd(),b))
+            if(os.path.isdir(b) == False):
+                if(isBinary(b) == False):
+                    if(b.startswith(".") == False):
+                        filesToCheck.append(os.path.join(os.getcwd(),b))
 
     return filesToCheck
 
